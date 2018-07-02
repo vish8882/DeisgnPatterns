@@ -1,13 +1,13 @@
 package duck;
 
 
-import duck.behaviour.NoFLy;
-import duck.behaviour.Squeak;
+import duck.behaviour.FlyBehaviour;
+import duck.behaviour.QuackBehaviour;
 
 public class ToyDuck extends Duck{
-	public ToyDuck(){
-		quackBehaviour= new Squeak();
-		flyBehaviour = new NoFLy();
+	public ToyDuck(QuackBehaviour quack, FlyBehaviour fly){
+		quackBehaviour= quack;
+		flyBehaviour = fly;
 	}
 
 	@Override

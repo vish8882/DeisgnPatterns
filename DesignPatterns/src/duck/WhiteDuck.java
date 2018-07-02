@@ -1,12 +1,12 @@
 package duck;
 
-import duck.behaviour.FlySpeed;
-import duck.behaviour.Quack;
+import duck.behaviour.FlyBehaviour;
+import duck.behaviour.QuackBehaviour;
 
 public class WhiteDuck extends Duck{
-	public WhiteDuck(){
-		quackBehaviour = new Quack();
-		flyBehaviour = new FlySpeed();
+	public WhiteDuck(QuackBehaviour quack, FlyBehaviour fly){
+		quackBehaviour= quack;
+		flyBehaviour = fly;
 	}
 
 	@Override
